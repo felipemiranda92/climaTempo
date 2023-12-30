@@ -7,23 +7,34 @@
 
 import UIKit
 
+protocol WeatherViewModelProtocol: AnyObject {
+    func sucessRequest()
+    func errorRequest()
+}
+
 class HomeViewModel: NSObject {
     
     var main: Main?
-    
     private var service: HomeService = HomeService()
+    weak var delegate: WeatherViewModelProtocol?
     
     func fetchWeatherDetails() {
         service.getWeatherDetailsURLSession { result in
-            switch result {
-            case .success(let success):
-//                print(success)
-//                print(success.weather)
-                self.main = success.main
-                print(self.main ?? 0)
-            case .failure(let failure):
-                print(failure.localizedDescription)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let success):
+                    print(success)
+                    self.main = success.main
+                    self.delegate?.sucessRequest()
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+                    self.delegate?.errorRequest()
+                }
             }
         }
+    }
+    
+    func temp() -> Double {
+        return main?.temp ?? 0
     }
 }

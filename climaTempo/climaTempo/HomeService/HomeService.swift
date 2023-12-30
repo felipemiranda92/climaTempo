@@ -8,12 +8,19 @@
 import UIKit
 
 class HomeService: NSObject {
- 
+    
+    var cityName: String = "brazil"
+    var requestString: String = ""
+    
     func getWeatherDetailsURLSession(completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
         
 //        guard let url = URL(string: "https://open-weather13.p.rapidapi.com/city/brazil") else { return }
         
+//        requestString = "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&q="
+        
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&q=brazil") else { return }
+        
+//        guard let url = URL(string: requestString + cityName) else { return }
         
 //        let headers = [
 //            "X-RapidAPI-Key": "db9e3332dcmshfc41ed0a16de062p1fd4bejsn259b7a99d49f",
