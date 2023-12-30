@@ -9,17 +9,20 @@ import UIKit
 
 class HomeService: NSObject {
  
-    func getWatherDetailsURLSession(completion: @escaping (Result<WatherDetails, Error>) -> Void) {
-        guard let url = URL(string: "https://open-weather13.p.rapidapi.com/city/brazil") else { return }
+    func getWeatherDetailsURLSession(completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
         
-        let headers = [
-            "X-RapidAPI-Key": "db9e3332dcmshfc41ed0a16de062p1fd4bejsn259b7a99d49f",
-            "X-RapidAPI-Host": "open-weather13.p.rapidapi.com"
-        ]
+//        guard let url = URL(string: "https://open-weather13.p.rapidapi.com/city/brazil") else { return }
+        
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&q=brazil") else { return }
+        
+//        let headers = [
+//            "X-RapidAPI-Key": "db9e3332dcmshfc41ed0a16de062p1fd4bejsn259b7a99d49f",
+//            "X-RapidAPI-Host": "open-weather13.p.rapidapi.com"
+//        ]
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+//        request.allHTTPHeaderFields = headers
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -32,8 +35,8 @@ class HomeService: NSObject {
             
             if response.statusCode == 200 {
                 do {
-                    let watherDetails: WatherDetails = try JSONDecoder().decode(WatherDetails.self, from: dataResult)
-                    completion(.success(watherDetails))
+                    let weatherDetails: WeatherDetails = try JSONDecoder().decode(WeatherDetails.self, from: dataResult)
+                    completion(.success(weatherDetails))
                 } catch {
                     completion(.failure(error))
                 }

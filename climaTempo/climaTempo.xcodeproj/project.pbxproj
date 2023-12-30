@@ -15,7 +15,7 @@
 		64E8264D2B3CF60100974813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E8264B2B3CF60100974813 /* LaunchScreen.storyboard */; };
 		DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */; };
 		DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA432B3F8C99008F8606 /* HomeService.swift */; };
-		DF29EA472B3F98A0008F8606 /* WatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA462B3F98A0008F8606 /* WatherDetails.swift */; };
+		DF29EA472B3F98A0008F8606 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		64E8264E2B3CF60100974813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DF29EA432B3F8C99008F8606 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
-		DF29EA462B3F98A0008F8606 /* WatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatherDetails.swift; sourceTree = "<group>"; };
+		DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		DF29EA452B3F9860008F8606 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF29EA462B3F98A0008F8606 /* WatherDetails.swift */,
+				DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E826452B3CF5FF00974813 /* HomeViewController.swift in Sources */,
-				DF29EA472B3F98A0008F8606 /* WatherDetails.swift in Sources */,
+				DF29EA472B3F98A0008F8606 /* WeatherDetails.swift in Sources */,
 				64E826412B3CF5FF00974813 /* AppDelegate.swift in Sources */,
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,

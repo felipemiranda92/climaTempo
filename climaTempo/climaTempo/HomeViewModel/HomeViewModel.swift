@@ -13,8 +13,8 @@ class HomeViewModel: NSObject {
     
     private var service: HomeService = HomeService()
     
-    func fetchWatherDetails() {
-        service.getWatherDetailsURLSession { result in
+    func fetchWeatherDetails() {
+        service.getWeatherDetailsURLSession { result in
             switch result {
             case .success(let success):
 //                print(success)
