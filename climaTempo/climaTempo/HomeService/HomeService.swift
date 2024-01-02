@@ -9,10 +9,9 @@ import UIKit
 
 class HomeService: NSObject {
     
-    var cityName: String = "london"
     var apiRequest: String = ""
     
-    func getWeatherDetailsURLSession(completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
+    func getWeatherDetailsURLSession(forCity city: String, completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
         
 //        guard let url = URL(string: "https://open-weather13.p.rapidapi.com/city/brazil") else { return }
         
@@ -20,7 +19,7 @@ class HomeService: NSObject {
         
 //        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&units=metric&q=london") else { return }
         
-        guard let url = URL(string: apiRequest + cityName) else { return }
+        guard let url = URL(string: apiRequest + city) else { return }
         
 //        let headers = [
 //            "X-RapidAPI-Key": "db9e3332dcmshfc41ed0a16de062p1fd4bejsn259b7a99d49f",
@@ -48,7 +47,7 @@ class HomeService: NSObject {
                     completion(.failure(error))
                 }
             } else {
-                completion(.failure(error ?? NSError(domain: "Deu ruim em", code: response.statusCode)))
+                completion(.failure(error ?? NSError(domain: "Error ao decodificar o JSON", code: response.statusCode)))
             }
         }
         task.resume()

@@ -18,8 +18,8 @@ class HomeViewModel: NSObject {
     private var service: HomeService = HomeService()
     weak var delegate: WeatherViewModelProtocol?
     
-    func fetchWeatherDetails() {
-        service.getWeatherDetailsURLSession { result in
+    func fetchWeatherDetails(city: String) {
+        service.getWeatherDetailsURLSession(forCity: city) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let success):

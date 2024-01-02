@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TextFieldProtocol: AnyObject {
+    func didEnterText(_ text: String)
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tempLabel: UILabel!
@@ -16,7 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         elementsConfig()
         viewModel.delegate = self
-        viewModel.fetchWeatherDetails()
+        viewModel.fetchWeatherDetails(city: "sao paulo")
     }
     
     func elementsConfig() {
