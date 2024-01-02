@@ -13,8 +13,11 @@ protocol TextFieldProtocol: AnyObject {
 
 class HomeViewController: UIViewController {
     
+  
     @IBOutlet weak var cityNameTextField: UITextField!
+    
     @IBOutlet weak var requestButton: UIButton!
+    
     @IBOutlet weak var tempLabel: UILabel!
     
     var viewModel: HomeViewModel = HomeViewModel()
@@ -24,7 +27,6 @@ class HomeViewController: UIViewController {
         elementsConfig()
         viewModel.delegate = self
     }
-    
     
     @IBAction func requestActionButton(_ sender: UIButton) {
         viewModel.fetchWeatherDetails(city: cityNameTextField.text ?? "")
