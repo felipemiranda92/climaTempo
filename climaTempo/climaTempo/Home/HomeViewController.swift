@@ -13,14 +13,21 @@ protocol TextFieldProtocol: AnyObject {
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var cityNameTextField: UITextField!
+    @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var tempLabel: UILabel!
+    
     var viewModel: HomeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         elementsConfig()
         viewModel.delegate = self
-        viewModel.fetchWeatherDetails(city: "sao paulo")
+    }
+    
+    
+    @IBAction func requestActionButton(_ sender: UIButton) {
+        viewModel.fetchWeatherDetails(city: cityNameTextField.text ?? "")
     }
     
     func elementsConfig() {

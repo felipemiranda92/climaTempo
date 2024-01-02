@@ -62,13 +62,9 @@
 		64E8263F2B3CF5FF00974813 /* climaTempo */ = {
 			isa = PBXGroup;
 			children = (
-				DF29EA452B3F9860008F8606 /* Model */,
-				DF29EA3C2B3F8AD1008F8606 /* HomeService */,
-				DF29EA3A2B3F8A83008F8606 /* HomeViewModel */,
+				DFE9E9892B442E800043010B /* Home */,
 				64E826402B3CF5FF00974813 /* AppDelegate.swift */,
 				64E826422B3CF5FF00974813 /* SceneDelegate.swift */,
-				64E826442B3CF5FF00974813 /* HomeViewController.swift */,
-				64E826462B3CF5FF00974813 /* Main.storyboard */,
 				64E826492B3CF60100974813 /* Assets.xcassets */,
 				64E8264B2B3CF60100974813 /* LaunchScreen.storyboard */,
 				64E8264E2B3CF60100974813 /* Info.plist */,
@@ -98,6 +94,18 @@
 				DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DFE9E9892B442E800043010B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64E826442B3CF5FF00974813 /* HomeViewController.swift */,
+				64E826462B3CF5FF00974813 /* Main.storyboard */,
+				DF29EA3A2B3F8A83008F8606 /* HomeViewModel */,
+				DF29EA452B3F9860008F8606 /* Model */,
+				DF29EA3C2B3F8AD1008F8606 /* HomeService */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -22,21 +22,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bej-WC-gdg">
+                                <rect key="frame" x="30" y="259" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3E-ax-TrH">
+                                <rect key="frame" x="159" y="328" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="requestActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNx-kx-B70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Bej-WC-gdg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9VU-ab-Cfy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bej-WC-gdg" secondAttribute="trailing" constant="30" id="Ery-M6-SiK"/>
+                            <constraint firstItem="X3E-ax-TrH" firstAttribute="top" secondItem="Bej-WC-gdg" secondAttribute="bottom" constant="35" id="alf-d3-Grs"/>
+                            <constraint firstItem="X3E-ax-TrH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="evm-eO-zc3"/>
+                            <constraint firstItem="Bej-WC-gdg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mJe-W6-Iy2"/>
                             <constraint firstItem="ToI-y0-7ZG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pcr-BM-eeT"/>
                             <constraint firstItem="ToI-y0-7ZG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roR-H6-m1N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X3E-ax-TrH" secondAttribute="trailing" constant="159" id="z46-hV-jLA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityNameTextField" destination="Bej-WC-gdg" id="Vz3-51-Uoi"/>
+                        <outlet property="requestButton" destination="X3E-ax-TrH" id="gt8-6F-FfP"/>
                         <outlet property="tempLabel" destination="ToI-y0-7ZG" id="K0J-zb-iWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-1941.2213740458014" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
