@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func enterActionButton(_ sender: UIButton) {
-        let home = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+        let home = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
         
         // Modal
 //        tela02?.modalPresentationStyle = .fullScreen

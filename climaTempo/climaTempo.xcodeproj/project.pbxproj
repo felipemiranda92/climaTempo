@@ -15,6 +15,8 @@
 		64E8264D2B3CF60100974813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E8264B2B3CF60100974813 /* LaunchScreen.storyboard */; };
 		DF0BC2BE2B44CED30066AEBA /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0BC2BD2B44CED30066AEBA /* HomeViewController.storyboard */; };
 		DF0BC2C02B44CF4E0066AEBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BC2BF2B44CF4E0066AEBA /* LoginViewController.swift */; };
+		DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2831C82B46253700EEEAD3 /* TabBarViewController.swift */; };
+		DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2831CA2B46255500EEEAD3 /* TabBarViewController.storyboard */; };
 		DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */; };
 		DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA432B3F8C99008F8606 /* HomeService.swift */; };
 		DF29EA472B3F98A0008F8606 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */; };
@@ -34,6 +36,8 @@
 		64E8264E2B3CF60100974813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BC2BD2B44CED30066AEBA /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		DF0BC2BF2B44CF4E0066AEBA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF2831C82B46253700EEEAD3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DF2831CA2B46255500EEEAD3 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DF29EA432B3F8C99008F8606 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		DF29EA462B3F98A0008F8606 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			children = (
 				DF5F8FBE2B45750D00854313 /* Details */,
 				DFE9E9892B442E800043010B /* Home */,
+				DF2831C72B4624E600EEEAD3 /* TabBar */,
 				DF0BC2C12B44CF570066AEBA /* Login */,
 				64E826402B3CF5FF00974813 /* AppDelegate.swift */,
 				64E826422B3CF5FF00974813 /* SceneDelegate.swift */,
@@ -90,6 +95,15 @@
 				DF5F8FC62B45814C00854313 /* LoginViewController */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DF2831C72B4624E600EEEAD3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DF2831C82B46253700EEEAD3 /* TabBarViewController.swift */,
+				DF2831CA2B46255500EEEAD3 /* TabBarViewController.storyboard */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		DF29EA3A2B3F8A83008F8606 /* HomeViewModel */ = {
@@ -232,6 +246,7 @@
 				64E8264D2B3CF60100974813 /* LaunchScreen.storyboard in Resources */,
 				64E8264A2B3CF60100974813 /* Assets.xcassets in Resources */,
 				DF0BC2BE2B44CED30066AEBA /* HomeViewController.storyboard in Resources */,
+				DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */,
 				DF5F8FC22B45752C00854313 /* DetailsViewController.storyboard in Resources */,
 				64E826482B3CF5FF00974813 /* Main.storyboard in Resources */,
 			);
@@ -252,6 +267,7 @@
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,
 				DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */,
+				DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */,
 				DF5F8FC82B45817700854313 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
