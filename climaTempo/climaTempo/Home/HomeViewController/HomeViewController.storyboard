@@ -29,31 +29,21 @@
                                     <action selector="requestActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LRH-c1-lgx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-EQ-Ow5">
-                                <rect key="frame" x="175" y="494" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vd4-in-fu8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="21x-Ee-lYk"/>
-                            <constraint firstItem="e9H-EQ-Ow5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="175" id="7FP-EX-wNH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vd4-in-fu8" secondAttribute="trailing" constant="30" id="G64-OZ-9Jz"/>
                             <constraint firstItem="0ge-kp-Mxq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="159" id="RYK-Nt-CE0"/>
-                            <constraint firstItem="e9H-EQ-Ow5" firstAttribute="top" secondItem="0ge-kp-Mxq" secondAttribute="bottom" constant="103" id="aSx-Ef-CbE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0ge-kp-Mxq" secondAttribute="trailing" constant="159" id="edM-KU-HE2"/>
                             <constraint firstItem="Vd4-in-fu8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="oT2-VG-6vX"/>
                             <constraint firstItem="0ge-kp-Mxq" firstAttribute="top" secondItem="Vd4-in-fu8" secondAttribute="bottom" constant="63" id="om9-vB-wLR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="e9H-EQ-Ow5" secondAttribute="trailing" constant="176" id="s3A-CG-a3a"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityNameTextField" destination="Vd4-in-fu8" id="6Hp-Nw-x9L"/>
                         <outlet property="requestButton" destination="0ge-kp-Mxq" id="e44-6K-u0w"/>
-                        <outlet property="tempLabel" destination="e9H-EQ-Ow5" id="VFI-GZ-eVm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
