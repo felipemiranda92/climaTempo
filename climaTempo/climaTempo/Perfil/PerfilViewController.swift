@@ -17,6 +17,10 @@ class PerfilViewController: UIViewController {
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
         
+        func sair() {
+        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+    }
+        
         let alert: UIAlertController  = UIAlertController(title: "Deseja sair?", message: "", preferredStyle: .alert)
         
         let action1: UIAlertAction = UIAlertAction(title: "Não", style: .default) {
@@ -25,7 +29,7 @@ class PerfilViewController: UIViewController {
         }
         
         let action2: UIAlertAction = UIAlertAction(title: "Sim", style: .destructive) {
-            (action) in print("Destructive")
+            (action) in sair()
         }
         
         let action3: UIAlertAction = UIAlertAction(title: "Cancelar", style: .cancel) {
