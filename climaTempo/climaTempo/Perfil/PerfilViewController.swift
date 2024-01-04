@@ -9,14 +9,37 @@ import UIKit
 
 class PerfilViewController: UIViewController {
 
+    
     @IBOutlet weak var exitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func exitActionButton(_ sender: UIButton) {
+    @IBAction func tappedExitButton(_ sender: UIButton) {
+        
+        let alert: UIAlertController  = UIAlertController(title: "Deseja sair?", message: "", preferredStyle: .alert)
+        
+        let action1: UIAlertAction = UIAlertAction(title: "Não", style: .default) {
+            (action) in
+            print("Default")
+        }
+        
+        let action2: UIAlertAction = UIAlertAction(title: "Sim", style: .destructive) {
+            (action) in print("Destructive")
+        }
+        
+        let action3: UIAlertAction = UIAlertAction(title: "Cancelar", style: .cancel) {
+            (action) in print("Cancel")
+        }
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        alert.addAction(action3)
+        
+        self.present(alert, animated: true, completion: nil)
+//        navigationController?.popViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true)
     }
+    
     
 }

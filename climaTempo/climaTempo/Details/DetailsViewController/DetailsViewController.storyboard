@@ -22,13 +22,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeJ-bZ-7Hl">
-                                <rect key="frame" x="159" y="520" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0O-PF-Siy">
+                                <rect key="frame" x="159" y="530.66666666666663" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="backRequestActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5In-rT-g0M"/>
+                                    <action selector="tappedBackRequestButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="908-c2-7EO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,11 +35,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VAL-8f-0cy" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="05M-bb-j3V"/>
+                            <constraint firstItem="w0O-PF-Siy" firstAttribute="top" secondItem="VAL-8f-0cy" secondAttribute="bottom" constant="94.329999999999998" id="4HU-Fq-f6o"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="w0O-PF-Siy" secondAttribute="trailing" constant="159" id="NN0-lB-9bj"/>
+                            <constraint firstItem="w0O-PF-Siy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="159" id="czY-G8-qap"/>
                             <constraint firstItem="VAL-8f-0cy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fE1-4w-oMX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backRequestButton" destination="IeJ-bZ-7Hl" id="r26-OG-3Mt"/>
+                        <outlet property="backRequestButton" destination="w0O-PF-Siy" id="4tt-IA-t1W"/>
                         <outlet property="tempLabel" destination="VAL-8f-0cy" id="Gns-U4-FcM"/>
                     </connections>
                 </viewController>

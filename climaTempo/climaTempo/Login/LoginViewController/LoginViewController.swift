@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
+    
     @IBOutlet weak var enterButton: UIButton!
     
     override func viewDidLoad() {
@@ -17,7 +18,8 @@ class LoginViewController: UIViewController {
 
     }
     
-    @IBAction func enterActionButton(_ sender: UIButton) {
+    @IBAction func tappedEnterButton(_ sender: UIButton) {
+        
         let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
         
         navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)

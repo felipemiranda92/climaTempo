@@ -23,10 +23,9 @@ class DetailsViewController: UIViewController {
         viewModel.fetchWeatherDetails(city: delegateTransfer?.transferTextFieldInfo() ?? "0")
     }
     
-    @IBAction func backRequestActionButton(_ sender: UIButton) {
+    @IBAction func tappedBackRequestButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
     
         func elementsConfig() {
             tempLabel.text = ""

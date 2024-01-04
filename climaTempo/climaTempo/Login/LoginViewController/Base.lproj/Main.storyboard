@@ -11,30 +11,30 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-0t-FxH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVJ-oL-hBy">
                                 <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="enterActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vu4-6r-FoT"/>
+                                    <action selector="tappedEnterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8A-AL-Npu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UUa-0t-FxH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LLh-vV-vWo"/>
-                            <constraint firstItem="UUa-0t-FxH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uku-c1-bDN"/>
+                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qyh-ta-X9b"/>
+                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RW1-Kj-j7d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tEG-Ey-9A4"/>
                     <connections>
-                        <outlet property="enterButton" destination="UUa-0t-FxH" id="q3t-aU-Goh"/>
+                        <outlet property="enterButton" destination="iVJ-oL-hBy" id="uHA-u0-D6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
