@@ -10,6 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var backRequestButton: UIButton!
     
     weak var delegate: WeatherViewModelProtocol?
     weak var delegateTransfer: DetailsViewModelProtocol?
@@ -21,6 +22,11 @@ class DetailsViewController: UIViewController {
         viewModel.delegate = self
         viewModel.fetchWeatherDetails(city: delegateTransfer?.transferTextFieldInfo() ?? "0")
     }
+    
+    @IBAction func backRequestActionButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     
         func elementsConfig() {
             tempLabel.text = ""

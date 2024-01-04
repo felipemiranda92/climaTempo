@@ -8,45 +8,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Details View Controller-->
+        <!--Perfil View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="Y6W-OH-hqX" customClass="DetailsViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PerfilViewController" id="Y6W-OH-hqX" customClass="PerfilViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAL-8f-0cy">
-                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeJ-bZ-7Hl">
-                                <rect key="frame" x="159" y="520" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l76-QB-NOP">
+                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="backRequestActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5In-rT-g0M"/>
+                                    <action selector="exitActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="maY-Bo-zI9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VAL-8f-0cy" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="05M-bb-j3V"/>
-                            <constraint firstItem="VAL-8f-0cy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fE1-4w-oMX"/>
+                            <constraint firstItem="l76-QB-NOP" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Sae-1P-46k"/>
+                            <constraint firstItem="l76-QB-NOP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XdD-xh-Jf5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backRequestButton" destination="IeJ-bZ-7Hl" id="r26-OG-3Mt"/>
-                        <outlet property="tempLabel" destination="VAL-8f-0cy" id="Gns-U4-FcM"/>
+                        <outlet property="exitButton" destination="l76-QB-NOP" id="2wg-7J-hQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="58" y="-2"/>
         </scene>
     </scenes>
     <resources>

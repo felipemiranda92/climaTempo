@@ -21,7 +21,12 @@ class HomeViewController: UIViewController {
     @IBAction func requestActionButton(_ sender: UIButton) {
         let details = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         details?.delegateTransfer = self
-        navigationController?.pushViewController(details ?? UIViewController(), animated: true)
+        
+//        navigationController?.pushViewController(details ?? UIViewController(), animated: true)
+        
+        details?.modalPresentationStyle = .fullScreen
+        present(details ?? UIViewController(), animated: true)
+        
     }
     
 }

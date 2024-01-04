@@ -11,20 +11,16 @@ class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var enterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     @IBAction func enterActionButton(_ sender: UIButton) {
-        let home = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
+        let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
         
-        // Modal
-//        tela02?.modalPresentationStyle = .fullScreen
-//        present(tela02 ?? UIViewController(), animated: true)
-        
-        // Navigation
-        navigationController?.pushViewController(home ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)
     }
     
     

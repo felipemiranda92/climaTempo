@@ -23,6 +23,8 @@
 		DF5F8FC02B45752400854313 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F8FBF2B45752400854313 /* DetailsViewController.swift */; };
 		DF5F8FC22B45752C00854313 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5F8FC12B45752C00854313 /* DetailsViewController.storyboard */; };
 		DF5F8FC82B45817700854313 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F8FC72B45817700854313 /* DetailsViewModel.swift */; };
+		DFB8C0B02B4637390003F294 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB8C0AF2B4637390003F294 /* PerfilViewController.swift */; };
+		DFB8C0B22B4637470003F294 /* PerfilViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB8C0B12B4637470003F294 /* PerfilViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		DF5F8FBF2B45752400854313 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DF5F8FC12B45752C00854313 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 		DF5F8FC72B45817700854313 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		DFB8C0AF2B4637390003F294 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		DFB8C0B12B4637470003F294 /* PerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		64E8263F2B3CF5FF00974813 /* climaTempo */ = {
 			isa = PBXGroup;
 			children = (
+				DFB8C0AA2B462ACC0003F294 /* Perfil */,
 				DF5F8FBE2B45750D00854313 /* Details */,
 				DFE9E9892B442E800043010B /* Home */,
 				DF2831C72B4624E600EEEAD3 /* TabBar */,
@@ -174,6 +179,15 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
+		DFB8C0AA2B462ACC0003F294 /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				DFB8C0AF2B4637390003F294 /* PerfilViewController.swift */,
+				DFB8C0B12B4637470003F294 /* PerfilViewController.storyboard */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
 		DFE9E9892B442E800043010B /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +262,7 @@
 				DF0BC2BE2B44CED30066AEBA /* HomeViewController.storyboard in Resources */,
 				DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */,
 				DF5F8FC22B45752C00854313 /* DetailsViewController.storyboard in Resources */,
+				DFB8C0B22B4637470003F294 /* PerfilViewController.storyboard in Resources */,
 				64E826482B3CF5FF00974813 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +280,7 @@
 				DF5F8FC02B45752400854313 /* DetailsViewController.swift in Sources */,
 				64E826412B3CF5FF00974813 /* AppDelegate.swift in Sources */,
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
+				DFB8C0B02B4637390003F294 /* PerfilViewController.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,
 				DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */,
 				DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */,
