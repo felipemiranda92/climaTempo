@@ -47,13 +47,13 @@ class DetailsViewController: UIViewController {
     
         func elementsConfig() {
             
-            tempLabel.text = "Aguarde ..."
-            nameCityLabel.text = "Aguarde ..."
-            descriptionLabel.text = "Aguarde ..."
-            windSpeedLabel.text = "Aguarde ..."
-            pressureLabel.text = "Aguarde ..."
-            humidityLabel.text = "Aguarde ..."
-            visibilityLabel.text = "Aguarde ..."
+            tempLabel.text = "Carregando ..."
+            nameCityLabel.text = "Carregando ..."
+            descriptionLabel.text = "Carregando ..."
+            windSpeedLabel.text = "Carregando ..."
+            pressureLabel.text = "Carregando ..."
+            humidityLabel.text = "Carregando ..."
+            visibilityLabel.text = "Carregando ..."
             
             windLabel.text = "Vento:"
             windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
@@ -80,7 +80,7 @@ class DetailsViewController: UIViewController {
             
             iconWeatherImageView.image = UIImage(named: viewModel.weatherIcon())
             
-            descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a minima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
+            descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a mínima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
             descriptionLabel.numberOfLines = 5
             descriptionLabel.textAlignment = .justified
             

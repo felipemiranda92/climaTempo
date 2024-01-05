@@ -13,6 +13,8 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
