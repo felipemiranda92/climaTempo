@@ -14,6 +14,11 @@ class PerfilViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        exitButton.setTitle("Sair", for: .normal)
+        exitButton.setTitleColor(UIColor.white, for: .normal)
+        exitButton.backgroundColor = UIColor.orange
+        exitButton.layer.cornerRadius = 5
+        
         
     }
     
@@ -34,13 +39,13 @@ class PerfilViewController: UIViewController {
             (action) in sair()
         }
         
-        let action3: UIAlertAction = UIAlertAction(title: "Cancelar", style: .cancel) {
-            (action) in print("Cancel")
-        }
+//        let action3: UIAlertAction = UIAlertAction(title: "Cancelar", style: .cancel) {
+//            (action) in print("Cancel")
+//        }
         
         alert.addAction(action1)
         alert.addAction(action2)
-        alert.addAction(action3)
+//        alert.addAction(action3)
         
         self.present(alert, animated: true, completion: nil)
 //        navigationController?.popViewController(animated: true)
