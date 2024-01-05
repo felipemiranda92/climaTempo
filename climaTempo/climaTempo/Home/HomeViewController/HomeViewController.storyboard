@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,42 +13,65 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-in-fu8">
-                                <rect key="frame" x="30" y="259" width="333" height="34"/>
+                                <rect key="frame" x="20" y="97" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="deM-8y-Mjw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-3b-mMa">
-                                <rect key="frame" x="159" y="363" width="75" height="35"/>
+                                <rect key="frame" x="100" y="247" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="tappedRequestButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jql-t3-4ga"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta4-cF-0YW">
+                                <rect key="frame" x="20" y="25" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-xA-RlH">
+                                <rect key="frame" x="20" y="61" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vd4-in-fu8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="21x-Ee-lYk"/>
-                            <constraint firstItem="J2Y-3b-mMa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="159" id="D3l-qY-qvl"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J2Y-3b-mMa" secondAttribute="trailing" constant="159" id="Dzi-3P-eg7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vd4-in-fu8" secondAttribute="trailing" constant="30" id="G64-OZ-9Jz"/>
-                            <constraint firstItem="Vd4-in-fu8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="oT2-VG-6vX"/>
-                            <constraint firstItem="J2Y-3b-mMa" firstAttribute="top" secondItem="Vd4-in-fu8" secondAttribute="bottom" constant="70" id="sVU-RW-qHT"/>
+                            <constraint firstItem="Vd4-in-fu8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0TU-Vr-JhP"/>
+                            <constraint firstItem="iPj-xA-RlH" firstAttribute="top" secondItem="ta4-cF-0YW" secondAttribute="bottom" constant="15" id="3fj-TI-0KS"/>
+                            <constraint firstItem="ta4-cF-0YW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="He4-xx-FCR"/>
+                            <constraint firstItem="J2Y-3b-mMa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="L76-wM-rve"/>
+                            <constraint firstItem="iPj-xA-RlH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="N5H-HG-kQJ"/>
+                            <constraint firstItem="J2Y-3b-mMa" firstAttribute="top" secondItem="Vd4-in-fu8" secondAttribute="bottom" constant="100" id="YQk-Cn-dO5"/>
+                            <constraint firstItem="Vd4-in-fu8" firstAttribute="top" secondItem="iPj-xA-RlH" secondAttribute="bottom" constant="15" id="d2n-bL-Dd5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ta4-cF-0YW" secondAttribute="trailing" constant="10" id="dbi-zN-wxu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J2Y-3b-mMa" secondAttribute="trailing" constant="100" id="mIa-XX-Hy5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iPj-xA-RlH" secondAttribute="trailing" constant="10" id="mVB-Gq-vIZ"/>
+                            <constraint firstItem="ta4-cF-0YW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="maX-xt-PG0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vd4-in-fu8" secondAttribute="trailing" constant="20" id="wkw-lF-DYk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityNameTextField" destination="Vd4-in-fu8" id="6Hp-Nw-x9L"/>
+                        <outlet property="descriptionAppLabel" destination="iPj-xA-RlH" id="dHL-jb-4bq"/>
                         <outlet property="requestButton" destination="J2Y-3b-mMa" id="LmS-wW-y9y"/>
+                        <outlet property="titleAppLabel" destination="ta4-cF-0YW" id="FoV-Rm-aMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="-2"/>
+            <point key="canvasLocation" x="121.875" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController {
         let firstVC: UINavigationController = {
             let vc = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.circle.fill"), tag: 0)
+            nav.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), tag: 0)
             return nav
         }()
         
