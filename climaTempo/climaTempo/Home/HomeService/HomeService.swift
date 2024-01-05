@@ -13,7 +13,7 @@ class HomeService: NSObject {
     
     func getWeatherDetailsURLSession(forCity city: String, completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
         
-        apiRequest = "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&units=metric&q="
+        apiRequest = "https://api.openweathermap.org/data/2.5/weather?appid=cf9ae2982462a287e2c11d55c7704d8e&lang=pt_br&units=metric&q="
         
         guard let url = URL(string: apiRequest + city) else { return }
     

@@ -8,13 +8,31 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameCityLabel: UILabel!
+    @IBOutlet weak var iconWeatherImageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var windLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    
+    @IBOutlet weak var titlePressureLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    
+    @IBOutlet weak var titleHumidityLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    
+    @IBOutlet weak var titleVisibilityLabel: UILabel!
+    @IBOutlet weak var visibilityLabel: UILabel!
+    
     @IBOutlet weak var backRequestButton: UIButton!
     
+    var descriptionText: String = ""
     weak var delegate: WeatherViewModelProtocol?
     weak var delegateTransfer: DetailsViewModelProtocol?
     var viewModel: HomeViewModel = HomeViewModel()
+    var fontSizeText: Int = 18
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +46,63 @@ class DetailsViewController: UIViewController {
     }
     
         func elementsConfig() {
-            tempLabel.text = ""
+            
+            tempLabel.text = "Aguarde ..."
+            nameCityLabel.text = "Aguarde ..."
+            descriptionLabel.text = "Aguarde ..."
+            windSpeedLabel.text = "Aguarde ..."
+            pressureLabel.text = "Aguarde ..."
+            humidityLabel.text = "Aguarde ..."
+            visibilityLabel.text = "Aguarde ..."
+            
+            windLabel.text = "Vento:"
+            windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            titlePressureLabel.text = "Pressão:"
+            titlePressureLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            titleHumidityLabel.text = "Umidade:"
+            titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            titleVisibilityLabel.text = "Visibilidade:"
+            titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            
+            backRequestButton.setTitle("Realizar nova pesquisa", for: .normal)
+            backRequestButton.setTitleColor(UIColor.white, for: .normal)
+            backRequestButton.backgroundColor = UIColor.orange
+            backRequestButton.layer.cornerRadius = 5
         }
     
         func elementsAPIConfig() {
-            tempLabel.text = String(viewModel.temp())
+            
+            tempLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+            tempLabel.text = String(viewModel.temp()) + "°C"
+            
+            nameCityLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+            nameCityLabel.text = viewModel.name()
+            
+            iconWeatherImageView.image = UIImage(named: viewModel.weatherIcon())
+            
+            descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a minima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
+            descriptionLabel.numberOfLines = 5
+            descriptionLabel.textAlignment = .justified
+            
+            descriptionLabel.text = descriptionText
+            
+            windSpeedLabel.text = String(Int(viewModel.windValue()*3.6)) + " km/h"
+            
+            titlePressureLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            pressureLabel.text = String(Int(viewModel.pressure())) + " hPa"
+            
+            titleHumidityLabel.text = "Umidade:"
+            titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            humidityLabel.text = String(Int(viewModel.humidity())) + "%"
+            
+            titleVisibilityLabel.text = "Visibilidade:"
+            titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+            if viewModel.visibilityValue() >= 10000 {
+                visibilityLabel.text = String(Int(viewModel.visibilityValue()/1000)) + " km"
+            } else {
+                visibilityLabel.text = String(Int(viewModel.visibilityValue())) + " km"
+            }
+            
         }
 }
 

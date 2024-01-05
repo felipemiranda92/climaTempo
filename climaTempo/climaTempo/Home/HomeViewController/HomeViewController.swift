@@ -24,13 +24,9 @@ class HomeViewController: UIViewController {
         let details = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         details?.delegateTransfer = self
         
-//        navigationController?.pushViewController(details ?? UIViewController(), animated: true)
-        
         details?.modalPresentationStyle = .fullScreen
         present(details ?? UIViewController(), animated: true)
-        
     }
-    
 }
 
 extension HomeViewController: DetailsViewModelProtocol {
