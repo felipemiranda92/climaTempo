@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mz9-qE-gO1">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,33 +13,130 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="climaTempo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVJ-oL-hBy">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="20" y="398" width="335" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entrar"/>
                                 <connections>
                                     <action selector="tappedEnterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8A-AL-Npu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="poN-qQ-EWs">
+                                <rect key="frame" x="30" y="84" width="315" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="Lga-Ui-BXx"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3FS-mT-JUY">
+                                <rect key="frame" x="20" y="205" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whw-Vw-EWQ">
+                                <rect key="frame" x="20" y="259" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcK-5m-a4A">
+                                <rect key="frame" x="200" y="313" width="155" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Esqueceu a senha?"/>
+                                <connections>
+                                    <action selector="tappedRecoverPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bng-6I-4HT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYX-Vr-pXt">
+                                <rect key="frame" x="100" y="443" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4Y-pG-JXX">
+                                <rect key="frame" x="20" y="484" width="335" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entrar com Google"/>
+                                <connections>
+                                    <action selector="tappedGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fkl-3V-WW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-nF-vVu">
+                                <rect key="frame" x="20" y="534" width="335" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Entrar com Facebook"/>
+                                <connections>
+                                    <action selector="tappedFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08C-Qz-0pC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKB-ui-O2m">
+                                <rect key="frame" x="150" y="579" width="146" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQs-CX-bo1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não tem cadastro?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-7O-i9G">
+                                <rect key="frame" x="100" y="588.5" width="42" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qyh-ta-X9b"/>
-                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RW1-Kj-j7d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PHj-nF-vVu" secondAttribute="trailing" constant="20" id="2Ii-kq-c3F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xcK-5m-a4A" secondAttribute="trailing" constant="20" id="2n5-iA-zhz"/>
+                            <constraint firstItem="Whw-Vw-EWQ" firstAttribute="top" secondItem="3FS-mT-JUY" secondAttribute="bottom" constant="20" id="5c1-ux-jFJ"/>
+                            <constraint firstItem="3FS-mT-JUY" firstAttribute="top" secondItem="poN-qQ-EWs" secondAttribute="bottom" constant="40" id="A9y-l4-hMr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FS-mT-JUY" secondAttribute="trailing" constant="20" id="DlR-rg-ln3"/>
+                            <constraint firstItem="qKB-ui-O2m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="isi-7O-i9G" secondAttribute="trailing" constant="8" symbolic="YES" id="K5W-25-ceZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Whw-Vw-EWQ" secondAttribute="trailing" constant="20" id="MgB-gi-tXE"/>
+                            <constraint firstItem="PHj-nF-vVu" firstAttribute="top" secondItem="V4Y-pG-JXX" secondAttribute="bottom" constant="15" id="PiR-4b-rb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="poN-qQ-EWs" secondAttribute="trailing" constant="30" id="Pxv-I5-dPb"/>
+                            <constraint firstItem="isi-7O-i9G" firstAttribute="leading" secondItem="hYX-Vr-pXt" secondAttribute="leading" id="Qa6-8Q-WDV"/>
+                            <constraint firstItem="poN-qQ-EWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SGb-yJ-cK6"/>
+                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="top" secondItem="xcK-5m-a4A" secondAttribute="bottom" constant="50" id="WqV-ct-41w"/>
+                            <constraint firstItem="V4Y-pG-JXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WtQ-pA-nsX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V4Y-pG-JXX" secondAttribute="trailing" constant="20" id="bV0-vN-RqS"/>
+                            <constraint firstItem="hYX-Vr-pXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="d4b-Pe-7ca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVJ-oL-hBy" secondAttribute="trailing" constant="20" id="fRf-EP-sIn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hYX-Vr-pXt" secondAttribute="trailing" constant="100" id="h0J-9Q-5Qe"/>
+                            <constraint firstItem="hYX-Vr-pXt" firstAttribute="top" secondItem="iVJ-oL-hBy" secondAttribute="bottom" constant="10" id="hMO-eB-CG2"/>
+                            <constraint firstItem="3FS-mT-JUY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iI9-6Z-ord"/>
+                            <constraint firstItem="isi-7O-i9G" firstAttribute="centerY" secondItem="qKB-ui-O2m" secondAttribute="centerY" id="koJ-4l-kCU"/>
+                            <constraint firstItem="poN-qQ-EWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lcq-0J-y1l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qKB-ui-O2m" secondAttribute="trailing" constant="79" id="nbK-w8-LYQ"/>
+                            <constraint firstItem="xcK-5m-a4A" firstAttribute="top" secondItem="Whw-Vw-EWQ" secondAttribute="bottom" constant="20" id="osu-37-2Nd"/>
+                            <constraint firstItem="V4Y-pG-JXX" firstAttribute="top" secondItem="hYX-Vr-pXt" secondAttribute="bottom" constant="20" id="rNn-ko-QnU"/>
+                            <constraint firstItem="PHj-nF-vVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tt2-ho-bzv"/>
+                            <constraint firstItem="qKB-ui-O2m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="uiT-Ay-j3p"/>
+                            <constraint firstItem="xcK-5m-a4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="vHz-8r-TAV"/>
+                            <constraint firstItem="Whw-Vw-EWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wXC-N5-wYV"/>
+                            <constraint firstItem="qKB-ui-O2m" firstAttribute="top" secondItem="PHj-nF-vVu" secondAttribute="bottom" constant="10" id="x0s-9G-HoT"/>
+                            <constraint firstItem="iVJ-oL-hBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ymc-ff-9aR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tEG-Ey-9A4"/>
                     <connections>
+                        <outlet property="emailTextField" destination="3FS-mT-JUY" id="paO-RG-mHN"/>
                         <outlet property="enterButton" destination="iVJ-oL-hBy" id="uHA-u0-D6c"/>
+                        <outlet property="loginFacebookChangeButton" destination="PHj-nF-vVu" id="idN-vQ-FrH"/>
+                        <outlet property="loginGoogleChangeButton" destination="V4Y-pG-JXX" id="5kC-Rn-VH5"/>
+                        <outlet property="logoImageView" destination="poN-qQ-EWs" id="lDz-rO-eWI"/>
+                        <outlet property="orLabel" destination="hYX-Vr-pXt" id="phd-lY-wcs"/>
+                        <outlet property="passwordTextField" destination="Whw-Vw-EWQ" id="jom-mM-Wyp"/>
+                        <outlet property="recoverPasswordChangeButton" destination="xcK-5m-a4A" id="God-qc-sOY"/>
+                        <outlet property="registerChangeButton" destination="qKB-ui-O2m" id="Yug-D4-P0n"/>
+                        <outlet property="textRegisterLabel" destination="isi-7O-i9G" id="5ez-jO-Fcs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669.46564885496184" y="7.746478873239437"/>
+            <point key="canvasLocation" x="-669.60000000000002" y="7.6461769115442282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bid-kV-BiE">
@@ -47,7 +144,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mz9-qE-gO1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YTN-eu-wbg">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
