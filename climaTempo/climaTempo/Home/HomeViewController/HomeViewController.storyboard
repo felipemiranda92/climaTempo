@@ -44,15 +44,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BZ-Xo-dMX">
+                                <rect key="frame" x="20" y="162" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vd4-in-fu8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0TU-Vr-JhP"/>
                             <constraint firstItem="iPj-xA-RlH" firstAttribute="top" secondItem="ta4-cF-0YW" secondAttribute="bottom" constant="15" id="3fj-TI-0KS"/>
+                            <constraint firstItem="3BZ-Xo-dMX" firstAttribute="top" secondItem="Vd4-in-fu8" secondAttribute="bottom" constant="15" id="5gq-Ug-1Cf"/>
                             <constraint firstItem="ta4-cF-0YW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="He4-xx-FCR"/>
                             <constraint firstItem="J2Y-3b-mMa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="L76-wM-rve"/>
                             <constraint firstItem="iPj-xA-RlH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="N5H-HG-kQJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3BZ-Xo-dMX" secondAttribute="trailing" constant="10" id="Xtx-yG-MHi"/>
+                            <constraint firstItem="3BZ-Xo-dMX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="YE1-9u-Yyt"/>
                             <constraint firstItem="J2Y-3b-mMa" firstAttribute="top" secondItem="Vd4-in-fu8" secondAttribute="bottom" constant="100" id="YQk-Cn-dO5"/>
                             <constraint firstItem="Vd4-in-fu8" firstAttribute="top" secondItem="iPj-xA-RlH" secondAttribute="bottom" constant="15" id="d2n-bL-Dd5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ta4-cF-0YW" secondAttribute="trailing" constant="10" id="dbi-zN-wxu"/>
@@ -65,6 +74,7 @@
                     <connections>
                         <outlet property="cityNameTextField" destination="Vd4-in-fu8" id="6Hp-Nw-x9L"/>
                         <outlet property="descriptionAppLabel" destination="iPj-xA-RlH" id="dHL-jb-4bq"/>
+                        <outlet property="invalidLabel" destination="3BZ-Xo-dMX" id="J0S-Zw-sUF"/>
                         <outlet property="requestButton" destination="J2Y-3b-mMa" id="LmS-wW-y9y"/>
                         <outlet property="titleAppLabel" destination="ta4-cF-0YW" id="FoV-Rm-aMq"/>
                     </connections>
