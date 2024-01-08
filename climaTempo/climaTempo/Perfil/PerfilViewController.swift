@@ -18,13 +18,11 @@ class PerfilViewController: UIViewController {
         exitButton.setTitleColor(UIColor.white, for: .normal)
         exitButton.backgroundColor = UIColor.orange
         exitButton.layer.cornerRadius = 5
-        
-        
     }
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
         
-        func sair() {
+        func exit() {
         UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
     }
         
@@ -36,21 +34,13 @@ class PerfilViewController: UIViewController {
         }
         
         let action2: UIAlertAction = UIAlertAction(title: "Sim", style: .destructive) {
-            (action) in sair()
+            (action) in exit()
         }
-        
-//        let action3: UIAlertAction = UIAlertAction(title: "Cancelar", style: .cancel) {
-//            (action) in print("Cancel")
-//        }
         
         alert.addAction(action1)
         alert.addAction(action2)
-//        alert.addAction(action3)
         
         self.present(alert, animated: true, completion: nil)
-//        navigationController?.popViewController(animated: true)
-//        navigationController?.popToRootViewController(animated: true)
     }
-    
     
 }
