@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64118D042B4B5862008DF67A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64118D032B4B5862008DF67A /* LoginViewModel.swift */; };
 		64E826412B3CF5FF00974813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826402B3CF5FF00974813 /* AppDelegate.swift */; };
 		64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826422B3CF5FF00974813 /* SceneDelegate.swift */; };
 		64E826452B3CF5FF00974813 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826442B3CF5FF00974813 /* HomeViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64118D032B4B5862008DF67A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		64E8263D2B3CF5FF00974813 /* climaTempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = climaTempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E826402B3CF5FF00974813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E826422B3CF5FF00974813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64118D022B4B5840008DF67A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64118D032B4B5862008DF67A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		64E826342B3CF5FF00974813 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		DF0BC2C12B44CF570066AEBA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				64118D022B4B5840008DF67A /* ViewModel */,
 				DF5F8FC62B45814C00854313 /* LoginViewController */,
 			);
 			path = Login;
@@ -282,6 +293,7 @@
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
 				DFB8C0B02B4637390003F294 /* PerfilViewController.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,
+				64118D042B4B5862008DF67A /* LoginViewModel.swift in Sources */,
 				DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */,
 				DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */,
 				DF5F8FC82B45817700854313 /* DetailsViewModel.swift in Sources */,
