@@ -64,6 +64,7 @@ extension HomeViewController: UITextFieldDelegate {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.cornerRadius = 5.0
+        invalidLabel.text = ""
     }
         
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
@@ -76,7 +77,6 @@ extension HomeViewController: UITextFieldDelegate {
             textField.layer.borderColor = UIColor.red.cgColor
         }
             
-        // Verifique se o campo de email está vazio e não está em foco
         if !textField.isFirstResponder {
             if textField.text == "" {
                 textField.layer.borderColor = UIColor.red.cgColor
