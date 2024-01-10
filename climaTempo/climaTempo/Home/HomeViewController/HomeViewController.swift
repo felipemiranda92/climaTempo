@@ -44,12 +44,25 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func tappedRequestButton(_ sender: UIButton) {
-
-        let details = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
-        details?.delegateTransfer = self
         
-        details?.modalPresentationStyle = .fullScreen
-        present(details ?? UIViewController(), animated: true)
+        if cityNameTextField.text == "" {
+            let alert: UIAlertController  = UIAlertController(title: "Preenchimento obrigatório", message: "", preferredStyle: .alert)
+            
+            let action1: UIAlertAction = UIAlertAction(title: "Voltar", style: .default) {
+                (action) in print("Default")
+            }
+            
+            alert.addAction(action1)
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            
+            let details = UIStoryboard(name: "DetailsViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
+            details?.delegateTransfer = self
+            
+            details?.modalPresentationStyle = .fullScreen
+            present(details ?? UIViewController(), animated: true)
+        }
     }
 }
 
@@ -83,18 +96,6 @@ extension HomeViewController: UITextFieldDelegate {
                 invalidLabel.font = UIFont.systemFont(ofSize: 15)
                 invalidLabel.textColor = UIColor.red
                 invalidLabel.text = "Preenchimento obrigatório"
-                
-                let alert: UIAlertController  = UIAlertController(title: "Preenchimento obrigatório", message: "", preferredStyle: .alert)
-                
-                
-                let action1: UIAlertAction = UIAlertAction(title: "Voltar", style: .default) {
-                    (action) in print("Default")
-                }
-                
-                alert.addAction(action1)
-                
-                self.present(alert, animated: true, completion: nil)
-                
                 
             } else {
                 textField.layer.borderColor = UIColor.lightGray.cgColor
