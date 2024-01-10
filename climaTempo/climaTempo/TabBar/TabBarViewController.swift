@@ -25,7 +25,7 @@ class TabBarViewController: UITabBarController {
         }()
         
         let secondVC: UINavigationController = {
-            let vc = UIStoryboard(name: "PerfilViewController", bundle: nil).instantiateViewController(withIdentifier: "PerfilViewController") as? PerfilViewController
+            let vc = UIStoryboard(name: "ProfileViewController", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
                 nav.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(systemName: "person.fill"), tag: 1)
             return nav

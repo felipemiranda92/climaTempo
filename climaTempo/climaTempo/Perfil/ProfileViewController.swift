@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PerfilViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     
     @IBOutlet weak var exitButton: UIButton!
@@ -22,10 +22,6 @@ class PerfilViewController: UIViewController {
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
         
-        func exit() {
-        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
-    }
-        
         let alert: UIAlertController  = UIAlertController(title: "Deseja sair?", message: "", preferredStyle: .alert)
         
         let action1: UIAlertAction = UIAlertAction(title: "Não", style: .default) {
@@ -34,7 +30,7 @@ class PerfilViewController: UIViewController {
         }
         
         let action2: UIAlertAction = UIAlertAction(title: "Sim", style: .destructive) {
-            (action) in exit()
+            (action) in exit(0)
         }
         
         alert.addAction(action1)

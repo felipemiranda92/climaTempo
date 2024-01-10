@@ -137,7 +137,7 @@ class DetailsViewController: UIViewController {
         let alert: UIAlertController  = UIAlertController(title: "Cidade ou estado inválido", message: "", preferredStyle: .alert)
         
         let action1: UIAlertAction = UIAlertAction(title: "Voltar", style: .default) {
-            (action) in print("Default")
+            (action) in self.dismiss(animated: true)
         }
         
         alert.addAction(action1)
