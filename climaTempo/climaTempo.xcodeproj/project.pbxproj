@@ -16,6 +16,8 @@
 		647D96EC2B4E07AF00BFDF63 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 647D96EB2B4E07AF00BFDF63 /* FirebaseAppCheck */; };
 		647D96EF2B4E089200BFDF63 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 647D96EE2B4E089200BFDF63 /* FirebaseAuth */; };
 		647D96F22B4E0DDF00BFDF63 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647D96F12B4E0DDF00BFDF63 /* Alert.swift */; };
+		647D96F52B4E265A00BFDF63 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647D96F42B4E265A00BFDF63 /* RegisterViewController.swift */; };
+		647D96F72B4E267700BFDF63 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647D96F62B4E267700BFDF63 /* RegisterViewController.storyboard */; };
 		64E826412B3CF5FF00974813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826402B3CF5FF00974813 /* AppDelegate.swift */; };
 		64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826422B3CF5FF00974813 /* SceneDelegate.swift */; };
 		64E826452B3CF5FF00974813 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E826442B3CF5FF00974813 /* HomeViewController.swift */; };
@@ -40,6 +42,8 @@
 		64118D032B4B5862008DF67A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		647D96E02B4E063D00BFDF63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		647D96F12B4E0DDF00BFDF63 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		647D96F42B4E265A00BFDF63 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../../../../Documents/RegisterViewController.swift; sourceTree = "<group>"; };
+		647D96F62B4E267700BFDF63 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RegisterViewController.storyboard; path = ../../../../Documents/RegisterViewController.storyboard; sourceTree = "<group>"; };
 		64E8263D2B3CF5FF00974813 /* climaTempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = climaTempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E826402B3CF5FF00974813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E826422B3CF5FF00974813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		647D96F32B4E25F400BFDF63 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				647D96F42B4E265A00BFDF63 /* RegisterViewController.swift */,
+				647D96F62B4E267700BFDF63 /* RegisterViewController.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		64E826342B3CF5FF00974813 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 				DF5F8FBE2B45750D00854313 /* Details */,
 				DFE9E9892B442E800043010B /* Home */,
 				DF2831C72B4624E600EEEAD3 /* TabBar */,
+				647D96F32B4E25F400BFDF63 /* Register */,
 				DF0BC2C12B44CF570066AEBA /* Login */,
 				64E826402B3CF5FF00974813 /* AppDelegate.swift */,
 				64E826422B3CF5FF00974813 /* SceneDelegate.swift */,
@@ -319,6 +333,7 @@
 				DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */,
 				DF5F8FC22B45752C00854313 /* DetailsViewController.storyboard in Resources */,
 				DFB8C0B22B4637470003F294 /* PerfilViewController.storyboard in Resources */,
+				647D96F72B4E267700BFDF63 /* RegisterViewController.storyboard in Resources */,
 				64E826482B3CF5FF00974813 /* Main.storyboard in Resources */,
 				647D96E12B4E063D00BFDF63 /* GoogleService-Info.plist in Resources */,
 			);
@@ -340,6 +355,7 @@
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
 				DFB8C0B02B4637390003F294 /* PerfilViewController.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,
+				647D96F52B4E265A00BFDF63 /* RegisterViewController.swift in Sources */,
 				64118D042B4B5862008DF67A /* LoginViewModel.swift in Sources */,
 				DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */,
 				DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */,

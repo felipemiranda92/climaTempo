@@ -34,27 +34,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
         
-//        let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
-//        
-//        navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)
-        
-//        Auth.auth().signIn(withEmail: "felipe@backfront.com", password: "felipe") { result, error in
-//            if let error = error {
-////                Alert().setNewAlert(target: self.viewController, title: "Alerta", message: "E-mail ou senha inválidos")
-//                print("Michael da massa")
-//            } else {
-//                        let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
-//                
-//                self.navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)
-////                self.navigateToTabBarController()
-////                print("aaaaa")
-//            }
-//        }
-        
         let email = emailTextField.text ?? ""
-//        let email = "felipe@backfront.com"
         let password = passwordTextField.text ?? ""
-//        let password = "felipe"
         viewModel?.loginWithEmail(email: email, password: password)
     }
     
