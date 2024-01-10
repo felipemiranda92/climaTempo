@@ -15,7 +15,10 @@ protocol WeatherViewModelProtocol: AnyObject {
 class HomeViewModel: NSObject {
     
     var main: Main?
+    var sys: Sys?
     var wind: Wind?
+    var dt: Int?
+    var timezone: Int?
     var nameCity: String?
     var weather: [Weather]?
     var visibility: Double?
@@ -30,11 +33,15 @@ class HomeViewModel: NSObject {
                 case .success(let success):
                     print(success)
                     self.main = success.main
+                    self.sys = success.sys
+                    self.dt = success.dt
+                    self.timezone = success.timezone
                     self.wind = success.wind
                     self.nameCity = success.name
                     self.weather = success.weather
                     self.visibility = success.visibility
                     self.delegate?.sucessRequest()
+                    print(success)
                 case .failure(let failure):
                     print(failure.localizedDescription)
                     self.failure = failure.localizedDescription
@@ -66,6 +73,18 @@ class HomeViewModel: NSObject {
     
     func visibilityValue() -> Double {
         return visibility ?? 0
+    }
+    
+    func date() -> Int {
+        return dt ?? 0
+    }
+    
+    func timezoneValue() -> Int {
+        return timezone ?? 0
+    }
+    
+    func country() -> String {
+        return sys?.country ?? ""
     }
     
     func temp() -> Double {

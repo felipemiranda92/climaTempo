@@ -10,6 +10,9 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var nameCityLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var iconWeatherImageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -49,6 +52,7 @@ class DetailsViewController: UIViewController {
             
             tempLabel.text = "Carregando ..."
             nameCityLabel.text = "Carregando ..."
+            dateLabel.text = ""
             descriptionLabel.text = "Carregando ..."
             windSpeedLabel.text = "Carregando ..."
             pressureLabel.text = "Carregando ..."
@@ -76,8 +80,21 @@ class DetailsViewController: UIViewController {
             tempLabel.text = String(viewModel.temp()) + "°C"
                 
             nameCityLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
-            nameCityLabel.text = viewModel.name()
-                
+            nameCityLabel.text = viewModel.name() + ", " + viewModel.country()
+            nameCityLabel.numberOfLines = 3
+            
+            let timeZoneOffsetInSeconds = viewModel.timezoneValue()
+            let unixTimestamp: TimeInterval = TimeInterval(viewModel.date())
+            let dateFormatter = DateFormatter()
+            let timeZone = TimeZone(secondsFromGMT: timeZoneOffsetInSeconds)
+            dateFormatter.timeZone = timeZone
+            let date = Date(timeIntervalSince1970: unixTimestamp)
+            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+            let dateString = dateFormatter.string(from: date)
+            
+            dateLabel.text = dateString
+            dateLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
+            
             iconWeatherImageView.image = UIImage(named: viewModel.weatherIcon())
                 
             descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a mínima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
@@ -105,6 +122,7 @@ class DetailsViewController: UIViewController {
     }
     func elementsAPIConfigError() {
         tempLabel.text = "ERRO"
+        dateLabel.text = ""
         nameCityLabel.text = "ERRO"
         descriptionLabel.text = "ERRO"
         windSpeedLabel.text = "ERRO"
