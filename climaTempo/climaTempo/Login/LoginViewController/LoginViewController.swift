@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleChangeButton: UIButton!
     @IBOutlet weak var loginFacebookChangeButton: UIButton!
     @IBOutlet weak var registerChangeButton: UIButton!
-    @IBOutlet weak var textRegisterLabel: UILabel!
     
     var viewModel: LoginViewModel?
     
@@ -52,6 +51,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        
+                let vcString = String(describing: RegisterViewController.self)
+                let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
+                navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
@@ -81,16 +84,16 @@ class LoginViewController: UIViewController {
 
         loginGoogleChangeButton.setTitle("Entrar com o Google", for: .normal)
         loginGoogleChangeButton.tintColor = UIColor.black
-        loginGoogleChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
-        loginGoogleChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
+        loginGoogleChangeButton.layer.borderWidth = 1.0 
+        loginGoogleChangeButton.layer.borderColor = UIColor.black.cgColor
 
         // Opcional: Arredondar as bordas do botão
         loginGoogleChangeButton.layer.cornerRadius = 8.0
 
         loginFacebookChangeButton.setTitle("Entrar com o Facebook", for: .normal)
         loginFacebookChangeButton.tintColor = UIColor.black
-        loginFacebookChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
-        loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
+        loginFacebookChangeButton.layer.borderWidth = 1.0
+        loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor
         
 
         // Opcional: Arredondar as bordas do botão
@@ -98,9 +101,6 @@ class LoginViewController: UIViewController {
 
         registerChangeButton.setTitle("Cadastrar", for: .normal)
 
-        textRegisterLabel.text = "Não tem cadastro?"
-        textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
-        textRegisterLabel.textColor = UIColor.gray
 
     }
     

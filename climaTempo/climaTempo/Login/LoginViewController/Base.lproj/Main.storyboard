@@ -78,12 +78,6 @@
                                     <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQs-CX-bo1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não tem cadastro?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-7O-i9G">
-                                <rect key="frame" x="100" y="588.5" width="42" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,11 +87,9 @@
                             <constraint firstItem="Whw-Vw-EWQ" firstAttribute="top" secondItem="3FS-mT-JUY" secondAttribute="bottom" constant="20" id="5c1-ux-jFJ"/>
                             <constraint firstItem="3FS-mT-JUY" firstAttribute="top" secondItem="poN-qQ-EWs" secondAttribute="bottom" constant="40" id="A9y-l4-hMr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FS-mT-JUY" secondAttribute="trailing" constant="20" id="DlR-rg-ln3"/>
-                            <constraint firstItem="qKB-ui-O2m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="isi-7O-i9G" secondAttribute="trailing" constant="8" symbolic="YES" id="K5W-25-ceZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Whw-Vw-EWQ" secondAttribute="trailing" constant="20" id="MgB-gi-tXE"/>
                             <constraint firstItem="PHj-nF-vVu" firstAttribute="top" secondItem="V4Y-pG-JXX" secondAttribute="bottom" constant="15" id="PiR-4b-rb3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="poN-qQ-EWs" secondAttribute="trailing" constant="30" id="Pxv-I5-dPb"/>
-                            <constraint firstItem="isi-7O-i9G" firstAttribute="leading" secondItem="hYX-Vr-pXt" secondAttribute="leading" id="Qa6-8Q-WDV"/>
                             <constraint firstItem="poN-qQ-EWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SGb-yJ-cK6"/>
                             <constraint firstItem="iVJ-oL-hBy" firstAttribute="top" secondItem="xcK-5m-a4A" secondAttribute="bottom" constant="50" id="WqV-ct-41w"/>
                             <constraint firstItem="V4Y-pG-JXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WtQ-pA-nsX"/>
@@ -107,7 +99,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hYX-Vr-pXt" secondAttribute="trailing" constant="100" id="h0J-9Q-5Qe"/>
                             <constraint firstItem="hYX-Vr-pXt" firstAttribute="top" secondItem="iVJ-oL-hBy" secondAttribute="bottom" constant="10" id="hMO-eB-CG2"/>
                             <constraint firstItem="3FS-mT-JUY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iI9-6Z-ord"/>
-                            <constraint firstItem="isi-7O-i9G" firstAttribute="centerY" secondItem="qKB-ui-O2m" secondAttribute="centerY" id="koJ-4l-kCU"/>
                             <constraint firstItem="poN-qQ-EWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lcq-0J-y1l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qKB-ui-O2m" secondAttribute="trailing" constant="79" id="nbK-w8-LYQ"/>
                             <constraint firstItem="xcK-5m-a4A" firstAttribute="top" secondItem="Whw-Vw-EWQ" secondAttribute="bottom" constant="20" id="osu-37-2Nd"/>
@@ -131,7 +122,6 @@
                         <outlet property="passwordTextField" destination="Whw-Vw-EWQ" id="jom-mM-Wyp"/>
                         <outlet property="recoverPasswordChangeButton" destination="xcK-5m-a4A" id="God-qc-sOY"/>
                         <outlet property="registerChangeButton" destination="qKB-ui-O2m" id="Yug-D4-P0n"/>
-                        <outlet property="textRegisterLabel" destination="isi-7O-i9G" id="5ez-jO-Fcs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
