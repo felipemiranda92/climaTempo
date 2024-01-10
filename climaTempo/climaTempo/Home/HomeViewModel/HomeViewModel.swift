@@ -19,6 +19,7 @@ class HomeViewModel: NSObject {
     var nameCity: String?
     var weather: [Weather]?
     var visibility: Double?
+    var failure: String?
     private var service: HomeService = HomeService()
     weak var delegate: WeatherViewModelProtocol?
     
@@ -36,10 +37,15 @@ class HomeViewModel: NSObject {
                     self.delegate?.sucessRequest()
                 case .failure(let failure):
                     print(failure.localizedDescription)
+                    self.failure = failure.localizedDescription
                     self.delegate?.errorRequest()
                 }
             }
         }
+    }
+    
+    func errorAPI() -> String {
+        return failure ?? ""
     }
     
     func name() -> String {

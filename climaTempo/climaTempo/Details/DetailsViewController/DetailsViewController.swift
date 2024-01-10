@@ -70,31 +70,31 @@ class DetailsViewController: UIViewController {
             backRequestButton.layer.cornerRadius = 5
         }
     
-        func elementsAPIConfig() {
-            
+        func elementsAPIConfigSuccess() {
+                
             tempLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
             tempLabel.text = String(viewModel.temp()) + "°C"
-            
+                
             nameCityLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
             nameCityLabel.text = viewModel.name()
-            
+                
             iconWeatherImageView.image = UIImage(named: viewModel.weatherIcon())
-            
+                
             descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a mínima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
             descriptionLabel.numberOfLines = 5
             descriptionLabel.textAlignment = .justified
-            
+                
             descriptionLabel.text = descriptionText
-            
+                
             windSpeedLabel.text = String(Int(viewModel.windValue()*3.6)) + " km/h"
-            
+                
             titlePressureLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             pressureLabel.text = String(Int(viewModel.pressure())) + " hPa"
-            
+                
             titleHumidityLabel.text = "Umidade:"
             titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             humidityLabel.text = String(Int(viewModel.humidity())) + "%"
-            
+                
             titleVisibilityLabel.text = "Visibilidade:"
             titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             if viewModel.visibilityValue() >= 10000 {
@@ -102,14 +102,55 @@ class DetailsViewController: UIViewController {
             } else {
                 visibilityLabel.text = String(Int(viewModel.visibilityValue())) + " km"
             }
-            
+    }
+    func elementsAPIConfigError() {
+        tempLabel.text = "ERRO"
+        nameCityLabel.text = "ERRO"
+        descriptionLabel.text = "ERRO"
+        windSpeedLabel.text = "ERRO"
+        pressureLabel.text = "ERRO"
+        humidityLabel.text = "ERRO"
+        visibilityLabel.text = "ERRO"
+        
+        tempLabel.textColor = UIColor.red
+        nameCityLabel.textColor = UIColor.red
+        descriptionLabel.textColor = UIColor.red
+        windSpeedLabel.textColor = UIColor.red
+        pressureLabel.textColor = UIColor.red
+        humidityLabel.textColor = UIColor.red
+        visibilityLabel.textColor = UIColor.red
+        
+        windLabel.text = "Vento:"
+        windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+        titlePressureLabel.text = "Pressão:"
+        titlePressureLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+        titleHumidityLabel.text = "Umidade:"
+        titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+        titleVisibilityLabel.text = "Visibilidade:"
+        titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
+        
+        backRequestButton.setTitle("Realizar nova pesquisa", for: .normal)
+        backRequestButton.setTitleColor(UIColor.white, for: .normal)
+        backRequestButton.backgroundColor = UIColor.orange
+        backRequestButton.layer.cornerRadius = 5
+        
+        let alert: UIAlertController  = UIAlertController(title: "Cidade ou estado inválido", message: "", preferredStyle: .alert)
+        
+        let action1: UIAlertAction = UIAlertAction(title: "Voltar", style: .default) {
+            (action) in print("Default")
         }
+        
+        alert.addAction(action1)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension DetailsViewController: WeatherViewModelProtocol {
     func sucessRequest() {
-         elementsAPIConfig()
+         elementsAPIConfigSuccess()
     }
     func errorRequest() {
+        elementsAPIConfigError()
     }
 }
