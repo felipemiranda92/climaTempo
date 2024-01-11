@@ -11,6 +11,7 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var nameCityLabel: UILabel!
     
+    @IBOutlet weak var dateHourTitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var iconWeatherImageView: UIImageView!
@@ -58,6 +59,10 @@ class DetailsViewController: UIViewController {
             pressureLabel.text = "Carregando ..."
             humidityLabel.text = "Carregando ..."
             visibilityLabel.text = "Carregando ..."
+            
+            
+            dateHourTitleLabel.text = "Data e hora locais:"
+            dateHourTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
             
             windLabel.text = "Vento:"
             windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)

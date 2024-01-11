@@ -25,7 +25,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13r-zd-8UB">
-                                <rect key="frame" x="20" y="76" width="290" height="21"/>
+                                <rect key="frame" x="72" y="76" width="170" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="tca-Br-hxQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,6 +130,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-tc-pPX">
+                                <rect key="frame" x="20" y="76" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -144,6 +153,7 @@
                             <constraint firstItem="szN-yt-ojp" firstAttribute="top" secondItem="c4w-7n-xmq" secondAttribute="bottom" constant="14" id="CiA-KN-dHt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aGL-5F-ZkG" secondAttribute="trailing" constant="10" id="D01-Xk-rq6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="w0O-PF-Siy" secondAttribute="trailing" constant="50" id="DDK-aM-HJC"/>
+                            <constraint firstItem="L6d-tc-pPX" firstAttribute="top" secondItem="8uD-qp-sfA" secondAttribute="bottom" constant="10" id="DvG-Ec-DZs"/>
                             <constraint firstItem="aGL-5F-ZkG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GjA-fq-YnC"/>
                             <constraint firstItem="c4w-7n-xmq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="HSx-b7-SkF"/>
                             <constraint firstItem="0E6-FX-BzV" firstAttribute="top" secondItem="5ca-um-3Hj" secondAttribute="bottom" constant="14" id="IJg-27-GhA"/>
@@ -158,20 +168,21 @@
                             <constraint firstItem="Nnv-El-Ctf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="dDC-a0-axl"/>
                             <constraint firstItem="13r-zd-8UB" firstAttribute="top" secondItem="8uD-qp-sfA" secondAttribute="bottom" constant="10" id="dKP-ZH-86N"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8uD-qp-sfA" secondAttribute="trailing" constant="10" id="ikx-HI-RyA"/>
+                            <constraint firstItem="L6d-tc-pPX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="k7y-Bt-t5h"/>
                             <constraint firstItem="fgk-qy-rOR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kzB-tS-hYc"/>
                             <constraint firstItem="5xW-IC-XQs" firstAttribute="top" secondItem="IB2-Ny-xPO" secondAttribute="bottom" constant="14" id="mMg-Hj-tC1"/>
                             <constraint firstItem="szN-yt-ojp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nKe-qN-vXN"/>
+                            <constraint firstItem="13r-zd-8UB" firstAttribute="leading" secondItem="L6d-tc-pPX" secondAttribute="trailing" constant="10" id="ojb-zI-zxs"/>
                             <constraint firstItem="Nnv-El-Ctf" firstAttribute="top" secondItem="szN-yt-ojp" secondAttribute="bottom" constant="40" id="qX0-Bp-2fl"/>
                             <constraint firstItem="0E6-FX-BzV" firstAttribute="leading" secondItem="sYy-CE-bDl" secondAttribute="trailing" constant="19" id="qvK-1Z-Gcw"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="13r-zd-8UB" secondAttribute="trailing" constant="10" id="r3L-7m-gPZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IB2-Ny-xPO" secondAttribute="trailing" constant="61" id="rJ2-5N-lPP"/>
                             <constraint firstItem="VAL-8f-0cy" firstAttribute="leading" secondItem="fgk-qy-rOR" secondAttribute="trailing" constant="40" id="rPl-1k-dbX"/>
-                            <constraint firstItem="13r-zd-8UB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="v6W-m0-bge"/>
                             <constraint firstItem="IB2-Ny-xPO" firstAttribute="top" secondItem="aGL-5F-ZkG" secondAttribute="bottom" constant="22" id="xGg-PT-5y6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backRequestButton" destination="w0O-PF-Siy" id="4tt-IA-t1W"/>
+                        <outlet property="dateHourTitleLabel" destination="L6d-tc-pPX" id="Wn1-TH-QaJ"/>
                         <outlet property="dateLabel" destination="13r-zd-8UB" id="Ekn-on-ntt"/>
                         <outlet property="descriptionLabel" destination="aGL-5F-ZkG" id="I4v-BX-6KM"/>
                         <outlet property="humidityLabel" destination="sYy-CE-bDl" id="wCL-fo-BfD"/>
