@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  climaTempo
-//
-//  Created by Felipe Miranda Santos on 27/12/23.
-//
+
 
 import UIKit
 
@@ -13,10 +8,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleAppLabel: UILabel!
     @IBOutlet weak var descriptionAppLabel: UILabel!
     @IBOutlet weak var cityNameTextField: UITextField!
-    
     @IBOutlet weak var invalidLabel: UILabel!
     @IBOutlet weak var requestButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +18,23 @@ class HomeViewController: UIViewController {
     
     func elementsConfig() {
         cityNameTextField.delegate = self
-        
         titleAppLabel.text = "ClimaTempo"
         titleAppLabel.font = UIFont.boldSystemFont(ofSize: 24)
         titleAppLabel.textAlignment = .center
         titleAppLabel.textColor = .orange
         titleAppLabel.alpha = 1.0
-            
         descriptionAppLabel.text = "Bem vindo ao climaTempo, aqui você pode consultar informações metereológicas de cidades ou estados, de qualquer lugar do mundo, mas atenção certifique-se que a ortografia esteja correta."
         descriptionAppLabel.font = UIFont.boldSystemFont(ofSize: 15)
         descriptionAppLabel.textColor = .gray
         descriptionAppLabel.alpha = 0.8
         descriptionAppLabel.numberOfLines = 5
         descriptionAppLabel.textAlignment = .justified
-        
         cityNameTextField.placeholder = "Digite o nome da cidade"
-        
         requestButton.setTitle("Realizar pesquisa", for: .normal)
         requestButton.setTitleColor(UIColor.white, for: .normal)
         requestButton.backgroundColor = UIColor.orange
         requestButton.layer.cornerRadius = 5
-        
         invalidLabel.text = ""
-        
     }
     
     @IBAction func tappedRequestButton(_ sender: UIButton) {

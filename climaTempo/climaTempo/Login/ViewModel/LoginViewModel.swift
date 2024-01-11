@@ -1,14 +1,6 @@
-//
-//  LoginViewModel.swift
-//  climaTempo
-//
-//  Created by Felipe Miranda Santos on 07/01/24.
-//
 
 import Foundation
 import Firebase
-
-
 import Foundation
 import UIKit
 
@@ -23,7 +15,7 @@ class LoginViewModel {
     func loginWithEmail(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if error != nil {
-                Alert().setNewAlert(target: self.viewController, title: "Alerta", message: "E-mail ou senha inválidos")
+                Alert().setNewAlert(target: self.viewController, title: "Email ou senha inválidos", message: "")
             } else {
                 self.navigateToTabBarController()
             }
@@ -35,5 +27,4 @@ class LoginViewModel {
         let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarViewController
         self.viewController.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
-   
 }

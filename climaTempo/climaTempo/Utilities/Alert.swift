@@ -1,9 +1,3 @@
-//
-//  Alert.swift
-//  climaTempo
-//
-//  Created by Felipe Miranda Santos on 09/01/24.
-//
 
 import Foundation
 import UIKit

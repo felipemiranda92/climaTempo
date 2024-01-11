@@ -1,35 +1,22 @@
-//
-//  DetailsViewController.swift
-//  climaTempo
-//
-//  Created by Michael Bressiani on 03/01/24.
-//
 
 import UIKit
 
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var nameCityLabel: UILabel!
-    
     @IBOutlet weak var dateHourTitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var iconWeatherImageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
-    
     @IBOutlet weak var titlePressureLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
-    
     @IBOutlet weak var titleHumidityLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
-    
     @IBOutlet weak var titleVisibilityLabel: UILabel!
     @IBOutlet weak var visibilityLabel: UILabel!
-    
     @IBOutlet weak var backRequestButton: UIButton!
     
     var descriptionText: String = ""
@@ -60,11 +47,8 @@ class DetailsViewController: UIViewController {
             humidityLabel.text = "Carregando ..."
             visibilityLabel.text = "Carregando ..."
             dateLabel.text = "Carregando ..."
-            
-            
             dateHourTitleLabel.text = "Data e hora locais:"
             dateHourTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-            
             windLabel.text = "Vento:"
             windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             titlePressureLabel.text = "Pressão:"
@@ -73,7 +57,6 @@ class DetailsViewController: UIViewController {
             titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             titleVisibilityLabel.text = "Visibilidade:"
             titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
-            
             backRequestButton.setTitle("Realizar nova pesquisa", for: .normal)
             backRequestButton.setTitleColor(UIColor.white, for: .normal)
             backRequestButton.backgroundColor = UIColor.orange
@@ -84,11 +67,9 @@ class DetailsViewController: UIViewController {
                 
             tempLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
             tempLabel.text = String(viewModel.temp()) + "°C"
-                
             nameCityLabel.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
             nameCityLabel.text = viewModel.name() + ", " + viewModel.country()
             nameCityLabel.numberOfLines = 3
-            
             let timeZoneOffsetInSeconds = viewModel.timezoneValue()
             let unixTimestamp: TimeInterval = TimeInterval(viewModel.date())
             let dateFormatter = DateFormatter()
@@ -97,27 +78,19 @@ class DetailsViewController: UIViewController {
             let date = Date(timeIntervalSince1970: unixTimestamp)
             dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
             let dateString = dateFormatter.string(from: date)
-            
             dateLabel.text = dateString
             dateLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
-            
             iconWeatherImageView.image = UIImage(named: viewModel.weatherIcon())
-                
             descriptionText = "Característa geral do clima: " + viewModel.weatherDescription() + ". Sensação térmica de " + String(viewModel.feelsLike()) + "°C" + " e máxima pode chegar a "  + String(viewModel.tempMax()) + "°C" + " enquanto a mínima fica em torno de " + String(viewModel.tempMin()) + "°C" + "."
             descriptionLabel.numberOfLines = 5
             descriptionLabel.textAlignment = .justified
-                
             descriptionLabel.text = descriptionText
-                
             windSpeedLabel.text = String(Int(viewModel.windValue()*3.6)) + " km/h"
-                
             titlePressureLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             pressureLabel.text = String(Int(viewModel.pressure())) + " hPa"
-                
             titleHumidityLabel.text = "Umidade:"
             titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             humidityLabel.text = String(Int(viewModel.humidity())) + "%"
-                
             titleVisibilityLabel.text = "Visibilidade:"
             titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
             if viewModel.visibilityValue() >= 10000 {
@@ -136,7 +109,6 @@ class DetailsViewController: UIViewController {
         humidityLabel.text = "ERRO"
         visibilityLabel.text = "ERRO"
         dateLabel.text = "ERRO"
-        
         tempLabel.textColor = UIColor.red
         nameCityLabel.textColor = UIColor.red
         descriptionLabel.textColor = UIColor.red
@@ -145,7 +117,6 @@ class DetailsViewController: UIViewController {
         humidityLabel.textColor = UIColor.red
         visibilityLabel.textColor = UIColor.red
         dateLabel.textColor = UIColor.red
-        
         dateHourTitleLabel.text = "Data e hora locais:"
         dateHourTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         windLabel.text = "Vento:"
@@ -156,12 +127,10 @@ class DetailsViewController: UIViewController {
         titleHumidityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
         titleVisibilityLabel.text = "Visibilidade:"
         titleVisibilityLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
-        
         backRequestButton.setTitle("Realizar nova pesquisa", for: .normal)
         backRequestButton.setTitleColor(UIColor.white, for: .normal)
         backRequestButton.backgroundColor = UIColor.orange
         backRequestButton.layer.cornerRadius = 5
-        
         let alert: UIAlertController  = UIAlertController(title: "Cidade ou estado inválido", message: "", preferredStyle: .alert)
         
         let action1: UIAlertAction = UIAlertAction(title: "Voltar", style: .default) {

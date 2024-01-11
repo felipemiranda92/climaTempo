@@ -1,19 +1,11 @@
-//
-//  PerfilViewController.swift
-//  climaTempo
-//
-//  Created by Michael Bressiani on 03/01/24.
-//
 
 import UIKit
 
 class ProfileViewController: UIViewController {
-
     
     @IBOutlet weak var exitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         exitButton.setTitle("Sair", for: .normal)
         exitButton.setTitleColor(UIColor.white, for: .normal)
         exitButton.backgroundColor = UIColor.orange

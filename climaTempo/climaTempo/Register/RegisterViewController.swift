@@ -1,9 +1,3 @@
-//
-//  RegisterViewController.swift
-//  climaTempo
-//
-//  Created by Felipe Miranda Santos on 09/01/24.
-//
 
 import UIKit
 import Firebase
@@ -12,14 +6,12 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var warningPasswordLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var haveaccountButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +21,19 @@ class RegisterViewController: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
-            let email = emailTextField.text ?? ""
-            let password = passwordTextField.text ?? ""
+    let email = emailTextField.text ?? ""
+    let password = passwordTextField.text ?? ""
             
-            Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                if error != nil {
-                    Alert().setNewAlert(target: self, title: "Email ou senha inválidos", message: "")
-                } else {
-                    let vcString = String(describing: TabBarViewController.self)
-                    let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarViewController
-                    self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
-                }
-            }
+    Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        if error != nil {
+            Alert().setNewAlert(target: self, title: "Email ou senha inválidos", message: "")
+        } else {
+            let vcString = String(describing: TabBarViewController.self)
+            let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarViewController
+            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        }
     }
-    
+}
     
     @IBAction func tappedLogin(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

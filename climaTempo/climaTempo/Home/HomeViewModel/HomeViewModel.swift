@@ -1,9 +1,3 @@
-//
-//  HomeViewModel.swift
-//  climaTempo
-//
-//  Created by Michael Bressiani on 29/12/23.
-//
 
 import UIKit
 
