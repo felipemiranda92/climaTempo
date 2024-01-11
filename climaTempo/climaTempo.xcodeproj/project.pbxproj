@@ -24,6 +24,8 @@
 		64E8264D2B3CF60100974813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E8264B2B3CF60100974813 /* LaunchScreen.storyboard */; };
 		DF0BC2BE2B44CED30066AEBA /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0BC2BD2B44CED30066AEBA /* HomeViewController.storyboard */; };
 		DF0BC2C02B44CF4E0066AEBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BC2BF2B44CF4E0066AEBA /* LoginViewController.swift */; };
+		DF2335D92B4F6DE700D6EFC8 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2335D72B4F6DE700D6EFC8 /* RegisterViewController.storyboard */; };
+		DF2335DA2B4F6DE700D6EFC8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2335D82B4F6DE700D6EFC8 /* RegisterViewController.swift */; };
 		DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2831C82B46253700EEEAD3 /* TabBarViewController.swift */; };
 		DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2831CA2B46255500EEEAD3 /* TabBarViewController.storyboard */; };
 		DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */; };
@@ -50,6 +52,8 @@
 		64E8264E2B3CF60100974813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BC2BD2B44CED30066AEBA /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		DF0BC2BF2B44CF4E0066AEBA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF2335D72B4F6DE700D6EFC8 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		DF2335D82B4F6DE700D6EFC8 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF2831C82B46253700EEEAD3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DF2831CA2B46255500EEEAD3 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		DF29EA412B3F8C83008F8606 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				DF5F8FBE2B45750D00854313 /* Details */,
 				DFE9E9892B442E800043010B /* Home */,
 				DF2831C72B4624E600EEEAD3 /* TabBar */,
+				DF2335D62B4F6DE700D6EFC8 /* Register */,
 				DF0BC2C12B44CF570066AEBA /* Login */,
 				64E826402B3CF5FF00974813 /* AppDelegate.swift */,
 				64E826422B3CF5FF00974813 /* SceneDelegate.swift */,
@@ -145,6 +150,15 @@
 				DF5F8FC62B45814C00854313 /* LoginViewController */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DF2335D62B4F6DE700D6EFC8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				DF2335D72B4F6DE700D6EFC8 /* RegisterViewController.storyboard */,
+				DF2335D82B4F6DE700D6EFC8 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		DF2831C72B4624E600EEEAD3 /* TabBar */ = {
@@ -319,6 +333,7 @@
 				DF2831CB2B46255500EEEAD3 /* TabBarViewController.storyboard in Resources */,
 				DF5F8FC22B45752C00854313 /* DetailsViewController.storyboard in Resources */,
 				DFB8C0B22B4637470003F294 /* ProfileViewController.storyboard in Resources */,
+				DF2335D92B4F6DE700D6EFC8 /* RegisterViewController.storyboard in Resources */,
 				64E826482B3CF5FF00974813 /* Main.storyboard in Resources */,
 				647D96E12B4E063D00BFDF63 /* GoogleService-Info.plist in Resources */,
 			);
@@ -340,6 +355,7 @@
 				64E826432B3CF5FF00974813 /* SceneDelegate.swift in Sources */,
 				DFB8C0B02B4637390003F294 /* ProfileViewController.swift in Sources */,
 				DF29EA422B3F8C83008F8606 /* HomeViewModel.swift in Sources */,
+				DF2335DA2B4F6DE700D6EFC8 /* RegisterViewController.swift in Sources */,
 				64118D042B4B5862008DF67A /* LoginViewModel.swift in Sources */,
 				DF29EA442B3F8C99008F8606 /* HomeService.swift in Sources */,
 				DF2831C92B46253700EEEAD3 /* TabBarViewController.swift in Sources */,

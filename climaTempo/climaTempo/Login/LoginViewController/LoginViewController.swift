@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleChangeButton: UIButton!
     @IBOutlet weak var loginFacebookChangeButton: UIButton!
     @IBOutlet weak var registerChangeButton: UIButton!
-    @IBOutlet weak var textRegisterLabel: UILabel!
     
     var viewModel: LoginViewModel?
     
@@ -71,6 +70,9 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let vcString = String(describing: RegisterViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
+                        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
@@ -110,17 +112,10 @@ class LoginViewController: UIViewController {
         loginFacebookChangeButton.tintColor = UIColor.black
         loginFacebookChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
         loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
-        
 
-        // Opcional: Arredondar as bordas do botão
         loginFacebookChangeButton.layer.cornerRadius = 8.0
 
         registerChangeButton.setTitle("Cadastrar", for: .normal)
-
-        textRegisterLabel.text = "Não tem cadastro?"
-        textRegisterLabel.font = UIFont.systemFont(ofSize: 15)
-        textRegisterLabel.textColor = UIColor.gray
-
     }
     
     
