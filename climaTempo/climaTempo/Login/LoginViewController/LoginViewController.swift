@@ -55,6 +55,9 @@ class LoginViewController: UIViewController {
     
     
     func configElements() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         emailTextField.placeholder = "Digite seu e-mail"
         passwordTextField.placeholder = "Digite sua senha"
         emailTextField.layer.borderWidth = 1.0
@@ -98,8 +101,38 @@ class LoginViewController: UIViewController {
         registerChangeButton.setTitleColor(UIColor.orange, for: .normal)
 
     }
-    
-    
-    
-    
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.blue.cgColor
+        textField.layer.cornerRadius = 5.0
+    }
+        
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 5.0
+        if textField.hasText {
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+                
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
+            
+        if !textField.isFirstResponder {
+            if textField.text == "" {
+                textField.layer.borderColor = UIColor.red.cgColor
+                
+            } else {
+                textField.layer.borderColor = UIColor.lightGray.cgColor
+            }
+        }
+    }
+        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
