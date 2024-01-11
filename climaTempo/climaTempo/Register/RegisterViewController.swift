@@ -12,6 +12,8 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var warningPasswordLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,7 +33,7 @@ class RegisterViewController: UIViewController {
             let password = passwordTextField.text ?? ""
             
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                if let error = error {
+                if error != nil {
                     Alert().setNewAlert(target: self, title: "Email ou senha inválidos", message: "")
                 } else {
                     let vcString = String(describing: TabBarViewController.self)
@@ -58,12 +60,19 @@ class RegisterViewController: UIViewController {
         titleLabel.textColor = .orange
         titleLabel.alpha = 1.0
         
-        descriptionLabel.text = "Faça seu cadastro"
+        descriptionLabel.text = "Faça seu cadastro para aproveitar o máximo de benefícios."
         descriptionLabel.font = UIFont.boldSystemFont(ofSize: 15)
         descriptionLabel.textColor = .gray
         descriptionLabel.alpha = 0.8
         descriptionLabel.numberOfLines = 5
         descriptionLabel.textAlignment = .justified
+        
+        warningPasswordLabel.text = "Atenção: caso tenha esquecido a senha precisará realizar novo cadastro com email ainda não cadastrado."
+        warningPasswordLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        warningPasswordLabel.textColor = .gray
+        warningPasswordLabel.alpha = 0.7
+        warningPasswordLabel.numberOfLines = 5
+        warningPasswordLabel.textAlignment = .justified
         
         nameTextField.placeholder = "Digite seu nome"
         

@@ -59,6 +59,7 @@ class DetailsViewController: UIViewController {
             pressureLabel.text = "Carregando ..."
             humidityLabel.text = "Carregando ..."
             visibilityLabel.text = "Carregando ..."
+            dateLabel.text = "Carregando ..."
             
             
             dateHourTitleLabel.text = "Data e hora locais:"
@@ -134,6 +135,7 @@ class DetailsViewController: UIViewController {
         pressureLabel.text = "ERRO"
         humidityLabel.text = "ERRO"
         visibilityLabel.text = "ERRO"
+        dateLabel.text = "ERRO"
         
         tempLabel.textColor = UIColor.red
         nameCityLabel.textColor = UIColor.red
@@ -142,7 +144,10 @@ class DetailsViewController: UIViewController {
         pressureLabel.textColor = UIColor.red
         humidityLabel.textColor = UIColor.red
         visibilityLabel.textColor = UIColor.red
+        dateLabel.textColor = UIColor.red
         
+        dateHourTitleLabel.text = "Data e hora locais:"
+        dateHourTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         windLabel.text = "Vento:"
         windLabel.font = UIFont.systemFont(ofSize: CGFloat(fontSizeText), weight: .semibold)
         titlePressureLabel.text = "Pressão:"

@@ -37,13 +37,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func tappedRecoverPasswordButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func tappedGoogleButton(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func tappedFacebookButton(_ sender: UIButton) {
+        
+        let vcString = String(describing: RegisterViewController.self)
+        let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? RegisterViewController
+                        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
@@ -85,7 +82,7 @@ class LoginViewController: UIViewController {
         titleLabel.textColor = .orange
         titleLabel.alpha = 1.0
         
-        welcomeLabel.text = "Faça o seu login para saber tudo sobre o clima e tempo no mundo"
+        welcomeLabel.text = "Faça o seu login para saber tudo sobre o clima e tempo no mundo."
         welcomeLabel.font = UIFont.boldSystemFont(ofSize: 15)
         welcomeLabel.textColor = .gray
         welcomeLabel.alpha = 0.8
