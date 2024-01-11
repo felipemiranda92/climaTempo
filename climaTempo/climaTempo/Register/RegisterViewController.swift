@@ -52,14 +52,15 @@ class RegisterViewController: UIViewController {
         titleLabel.text = "ClimaTempo"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .systemBlue
+        titleLabel.textColor = .orange
         titleLabel.alpha = 1.0
         
         descriptionLabel.text = "Faça seu cadastro"
         descriptionLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        descriptionLabel.textAlignment = .left
         descriptionLabel.textColor = .gray
         descriptionLabel.alpha = 0.8
+        descriptionLabel.numberOfLines = 5
+        descriptionLabel.textAlignment = .justified
         
         nameTextField.placeholder = "Digite seu nome"
         
@@ -69,6 +70,12 @@ class RegisterViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         
         registerButton.setTitle("Cadastrar", for: .normal)
+        registerButton.setTitleColor(UIColor.white, for: .normal)
+        registerButton.backgroundColor = UIColor.orange
+        registerButton.layer.cornerRadius = 5
+        
+        haveaccountButton.setTitle("Já tem conta?", for: .normal)
+        haveaccountButton.setTitleColor(UIColor.orange, for: .normal)
     }
     
 

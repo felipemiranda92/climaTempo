@@ -12,14 +12,12 @@ class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var enterButton: UIButton!
-    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var recoverPasswordChangeButton: UIButton!
-    @IBOutlet weak var orLabel: UILabel!
-    @IBOutlet weak var loginGoogleChangeButton: UIButton!
-    @IBOutlet weak var loginFacebookChangeButton: UIButton!
     @IBOutlet weak var registerChangeButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     var viewModel: LoginViewModel?
     
@@ -32,28 +30,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        
-//        let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
-//        
-//        navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)
-        
-//        Auth.auth().signIn(withEmail: "felipe@backfront.com", password: "felipe") { result, error in
-//            if let error = error {
-////                Alert().setNewAlert(target: self.viewController, title: "Alerta", message: "E-mail ou senha inválidos")
-//                print("Michael da massa")
-//            } else {
-//                        let tabBar = UIStoryboard(name: "TabBarViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
-//                
-//                self.navigationController?.pushViewController(tabBar ?? UIViewController(), animated: true)
-////                self.navigateToTabBarController()
-////                print("aaaaa")
-//            }
-//        }
-        
         let email = emailTextField.text ?? ""
-//        let email = "felipe@backfront.com"
         let password = passwordTextField.text ?? ""
-//        let password = "felipe"
         viewModel?.loginWithEmail(email: email, password: password)
     }
     
@@ -80,6 +58,9 @@ class LoginViewController: UIViewController {
         emailTextField.placeholder = "Digite seu e-mail"
         passwordTextField.placeholder = "Digite sua senha"
         emailTextField.layer.borderWidth = 1.0
+        
+        emailTextField.layer.cornerRadius = 5.0
+        passwordTextField.layer.cornerRadius = 5.0
 
         passwordTextField.isSecureTextEntry = true
         passwordTextField.layer.borderWidth = 1.0
@@ -94,28 +75,28 @@ class LoginViewController: UIViewController {
                 outgoing.font = UIFont.systemFont(ofSize: 14)
                 return outgoing
             }
-
-
-        orLabel.text = "ou"
-        orLabel.font = UIFont.systemFont(ofSize: 15)
-        orLabel.textColor = UIColor.gray
-
-        loginGoogleChangeButton.setTitle("Entrar com o Google", for: .normal)
-        loginGoogleChangeButton.tintColor = UIColor.black
-        loginGoogleChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
-        loginGoogleChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
-
-        // Opcional: Arredondar as bordas do botão
-        loginGoogleChangeButton.layer.cornerRadius = 8.0
-
-        loginFacebookChangeButton.setTitle("Entrar com o Facebook", for: .normal)
-        loginFacebookChangeButton.tintColor = UIColor.black
-        loginFacebookChangeButton.layer.borderWidth = 1.0 // Largura da borda em pontos
-        loginFacebookChangeButton.layer.borderColor = UIColor.black.cgColor // Cor da borda
-
-        loginFacebookChangeButton.layer.cornerRadius = 8.0
-
+        
+        titleLabel.text = "ClimaTempo"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .orange
+        titleLabel.alpha = 1.0
+        
+        welcomeLabel.text = "Faça o seu login para saber tudo sobre o clima e tempo no mundo"
+        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        welcomeLabel.textColor = .gray
+        welcomeLabel.alpha = 0.8
+        welcomeLabel.numberOfLines = 5
+        welcomeLabel.textAlignment = .justified
+        
+        enterButton.setTitle("Entrar", for: .normal)
+        enterButton.setTitleColor(UIColor.white, for: .normal)
+        enterButton.backgroundColor = UIColor.orange
+        enterButton.layer.cornerRadius = 5
+        
         registerChangeButton.setTitle("Cadastrar", for: .normal)
+        registerChangeButton.setTitleColor(UIColor.orange, for: .normal)
+
     }
     
     

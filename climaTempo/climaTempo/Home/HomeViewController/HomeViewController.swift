@@ -25,10 +25,17 @@ class HomeViewController: UIViewController {
     
     func elementsConfig() {
         cityNameTextField.delegate = self
-        titleAppLabel.text = "climaTempo"
-        titleAppLabel.font = UIFont.systemFont(ofSize: 40, weight: .bold)
-    
+        
+        titleAppLabel.text = "ClimaTempo"
+        titleAppLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        titleAppLabel.textAlignment = .center
+        titleAppLabel.textColor = .orange
+        titleAppLabel.alpha = 1.0
+            
         descriptionAppLabel.text = "Bem vindo ao climaTempo, aqui você pode consultar informações metereológicas de cidades ou estados, de qualquer lugar do mundo, mas atenção certifique-se que a ortografia esteja correta."
+        descriptionAppLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        descriptionAppLabel.textColor = .gray
+        descriptionAppLabel.alpha = 0.8
         descriptionAppLabel.numberOfLines = 5
         descriptionAppLabel.textAlignment = .justified
         

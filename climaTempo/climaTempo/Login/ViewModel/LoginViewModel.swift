@@ -22,7 +22,7 @@ class LoginViewModel {
     
     func loginWithEmail(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let error = error {
+            if error != nil {
                 Alert().setNewAlert(target: self.viewController, title: "Alerta", message: "E-mail ou senha inválidos")
             } else {
                 self.navigateToTabBarController()
