@@ -32,15 +32,13 @@ class RegisterViewController: UIViewController {
             
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                 if let error = error {
-                    Alert().setNewAlert(target: self, title: "Alerta", message: "Erro : \(error.localizedDescription)")
+                    Alert().setNewAlert(target: self, title: "Email ou senha inválidos", message: "")
                 } else {
                     let vcString = String(describing: TabBarViewController.self)
                     let vc = UIStoryboard(name: vcString, bundle: nil).instantiateViewController(withIdentifier: vcString) as? TabBarViewController
                     self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
                 }
             }
-            
-        
     }
     
     
@@ -49,6 +47,10 @@ class RegisterViewController: UIViewController {
     }
     
     func configElements() {
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         view.backgroundColor = .systemBackground
         titleLabel.text = "ClimaTempo"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
@@ -78,6 +80,37 @@ class RegisterViewController: UIViewController {
         haveaccountButton.setTitle("Já tem conta?", for: .normal)
         haveaccountButton.setTitleColor(UIColor.orange, for: .normal)
     }
-    
+}
 
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.blue.cgColor
+        textField.layer.cornerRadius = 5.0
+    }
+        
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 5.0
+        if textField.hasText {
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+                
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
+            
+        if !textField.isFirstResponder {
+            if textField.text == "" {
+                textField.layer.borderColor = UIColor.red.cgColor
+                
+            } else {
+                textField.layer.borderColor = UIColor.lightGray.cgColor
+            }
+        }
+    }
+        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
